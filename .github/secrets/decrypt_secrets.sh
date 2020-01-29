@@ -1,11 +1,11 @@
 #!/bin/sh
 
-gpg --quiet --batch --yes --decrypt --passphrase="$IOS_PROFILE_KEY" --output ./.github/secrets/profile.mobileprovision ./.github/secrets/profile.mobileprovision.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$IOS_PROFILE_KEY" --output ./.github/secrets/GitHubTestingDistribution.mobileprovision ./.github/secrets/GitHubTestingDistribution.mobileprovision.gpg
 gpg --quiet --batch --yes --decrypt --passphrase="$IOS_PROFILE_KEY" --output ./.github/secrets/Certificates.p12 ./.github/secrets/Certificates.p12.gpg
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 
-cp ./.github/secrets/profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/d6a4f1d0-701f-4049-98fe-1bb25a7c85d2.mobileprovision
+cp ./.github/secrets/profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/113879d5-cde8-4a6a-879b-d805bc94c145.mobileprovision
 
 
 security create-keychain -p "" build.keychain

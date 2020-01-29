@@ -49,13 +49,13 @@ jobs:
       - name: Build app
         run: |
           cd ios && xcodebuild archive \
-            -workspace appname.xcworkspace \
-            -scheme Food \
-            -sdk iphoneos13.0 \
+            -workspace GitHubActions.xcworkspace \
+            -scheme GitHubActions \
+            -sdk iphoneos12.4 \
             -configuration Release \
             -archivePath $PWD/build/Food.xcarchive \
             IPHONEOS_DEPLOYMENT_TARGET=9.0
-            PROVISIONING_PROFILE="d6a4f1d0-701f-4049-98fe-1bb25a7c85d2" \
+            PROVISIONING_PROFILE="113879d5-cde8-4a6a-879b-d805bc94c145" \
             CODE_SIGN_IDENTITY="iPhone Distribution: Hureka Technologies Inc. (9PZ48NZ29N)"
       - name: Export app
         run: |
